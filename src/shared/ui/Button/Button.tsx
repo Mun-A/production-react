@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Button.module.scss";
 import { ButtonHTMLAttributes, FC } from "react";
 
-enum ThemeButton {
+export enum ThemeButton {
     CLEAN = 'clean',
 }
 
