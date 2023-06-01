@@ -39,7 +39,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'linebreak-style': ['error', 'windows'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
         'arrow-body-style': 'off',
