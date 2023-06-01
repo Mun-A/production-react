@@ -1,4 +1,4 @@
-declare module "*.scss" {
+declare module '*.scss' {
     interface IClassNames {
         [className: string]: string;
     }
@@ -6,14 +6,16 @@ declare module "*.scss" {
     export = classNames;
 }
 
-declare module "*.svg" {
+declare module '*.svg' {
+    import React from 'react';
+
     const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
     export default content;
 }
 
-declare module "*.png";
-declare module "*.gif";
-declare module "*.jpeg";
-declare module "*.jpg";
+declare module '*.png';
+declare module '*.gif';
+declare module '*.jpeg';
+declare module '*.jpg';
 
 declare const __IS_DEV__: boolean;
