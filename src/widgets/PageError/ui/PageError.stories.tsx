@@ -8,9 +8,6 @@ const meta: Meta<typeof PageError> = {
     title: 'widget/PageError',
     component: PageError,
     tags: ['autodocs'],
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 };
 
 export default meta;

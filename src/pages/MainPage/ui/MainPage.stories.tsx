@@ -8,9 +8,6 @@ const meta: Meta<typeof MainPage> = {
     title: 'pages/MainPage',
     component: MainPage,
     tags: ['autodocs'],
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 };
 
 export default meta;
