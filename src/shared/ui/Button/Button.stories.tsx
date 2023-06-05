@@ -19,10 +19,10 @@ Primary.args = {
     children: 'Text',
 };
 
-export const Clear = Template.bind({});
-Clear.args = {
+export const Clean = Template.bind({});
+Clean.args = {
     children: 'Text',
-    theme: ThemeButton.CLEAR,
+    theme: ThemeButton.CLEAN,
 };
 
 export const Outline = Template.bind({});
