@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -24,7 +25,9 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -37,14 +40,35 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'linebreak-style': ['error', 'windows'],
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'linebreak-style': 'off',
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
+        'max-len': [
+            'error',
+            {
+                ignoreComments: true,
+                code: 100,
+            },
+        ],
         'operator-linebreak': 'off',
         'implicit-arrow-linebreak': 'off',
         'arrow-body-style': 'off',
+        'object-curly-newline': 'off',
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
