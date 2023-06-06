@@ -1,11 +1,21 @@
 {
+  "Quis laborum sunt est ea exercitation Lorem esse": {
+    " Ipsum voluptate do esse duis aliquip aliqua id commodo reprehenderit exercitation": {
+      " Reprehenderit ea consectetur aliquip cillum ad irure laborum cillum consequat proident deserunt": {
+        " Cupidatat laboris proident cupidatat commodo id occaecat duis consequat duis quis id qui": {
+          " Eiusmod velit sit occaecat ipsum incididunt sit voluptate": {
+            "": ""
+          }
+        }
+      }
+    }
+  },
   "throw error": "",
-  "toggle": "toggle",
+  "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
-  "Страница не найдена": "Страница не найдена",
-  "Язык": "Язык"
+  "Страница не найдена": "Страница не найдена"
 }
