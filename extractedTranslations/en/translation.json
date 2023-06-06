@@ -10,6 +10,8 @@
       }
     }
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "",
   "Войти": "Войти",
   "Главная": "Главная",
