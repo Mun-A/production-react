@@ -52,7 +52,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 100,
+                code: 120,
             },
         ],
         'operator-linebreak': 'off',
