@@ -1,18 +1,9 @@
 {
-  "Quis laborum sunt est ea exercitation Lorem esse": {
-    " Ipsum voluptate do esse duis aliquip aliqua id commodo reprehenderit exercitation": {
-      " Reprehenderit ea consectetur aliquip cillum ad irure laborum cillum consequat proident deserunt": {
-        " Cupidatat laboris proident cupidatat commodo id occaecat duis consequat duis quis id qui": {
-          " Eiusmod velit sit occaecat ipsum incididunt sit voluptate": {
-            "": ""
-          }
-        }
-      }
-    }
-  },
   "decrement": "decrement",
   "increment": "increment",
   "throw error": "",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
   "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
