@@ -4,11 +4,16 @@
     padding: 6px 15px;
 }
 
-.clean {
+.clean,
+.cleanInverted {
     padding: 0;
     border: none;
     background: none;
     outline: none;
+}
+
+.cleanInverted {
+    color: var(--inverted-primary-color);
 }
 
 .outline {
@@ -58,4 +63,9 @@
 
 .size_xl {
     font: var(--font-xl);
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

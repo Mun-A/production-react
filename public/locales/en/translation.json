@@ -1,12 +1,18 @@
 {
-  "Язык": "English",
-  "Короткий язык": "En",
-  "Страница не найдена": "Page not found",
-  "toggle": "Toggle",
-  "Loading": "Loading...",
-  "Произошла непредвиденная ошибка": "Something went wrong",
-  "Обновить страницу": "Refresh page",
-  "Главная": "Main",
-  "О сайте": "About us",
-  "throw error": "Throw error"
+    "Язык": "English",
+    "Короткий язык": "En",
+    "Страница не найдена": "Page not found",
+    "toggle": "Toggle",
+    "Loading": "Loading...",
+    "Произошла непредвиденная ошибка": "Something went wrong",
+    "Обновить страницу": "Refresh page",
+    "Главная": "Main",
+    "О сайте": "About us",
+    "throw error": "Throw error",
+    "Войти": "Login",
+    "Выйти": "Logout",
+    "Введите username": "Username",
+    "Введите пароль": "Password",
+    "Форма авторизации": "Authorization form",
+    "Вы ввели неверный логин или пароль": "Invalid username or password"
 }
