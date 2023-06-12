@@ -77,6 +77,7 @@ module.exports = {
             files: [
                 '**/src/**/*.{test,stories}.{ts,tsx}',
                 '**/src/**/slice/*.ts',
+                '**/src/**/slices/*.ts',
             ],
             rules: {
                 'i18next/no-literal-string': 'off',
