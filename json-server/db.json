@@ -19,6 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -150,36 +151,6 @@
       "userId": "2",
       "text": "asdasdasd",
       "id": "MVvGQoZ"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "123dawda",
-      "id": "UdoB9jq"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "вцйвцй",
-      "id": "jPq83-2"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "21321asd",
-      "id": "cXHX1Vk"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "pooppoo",
-      "id": "qvwBSy6"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "hey",
-      "id": "a5A-8N1"
     }
   ],
   "users": [
@@ -212,7 +183,7 @@
     },
     {
       "id": "2",
-      "first": "Test User",
+      "first": "ulbi tv",
       "lastname": "asf",
       "age": 465,
       "currency": "RUB",

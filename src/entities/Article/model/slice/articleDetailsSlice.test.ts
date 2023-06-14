@@ -10,6 +10,11 @@ const data: Article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+        id: '1',
+        username: 'Artur',
+        avatar: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/08/how-to-become-a-programmer.jpg',
+    },
     type: [ArticleType.IT],
     blocks: [
         {

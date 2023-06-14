@@ -14,6 +14,11 @@ const article: Article = {
     img: 'img',
     views: 0,
     createdAt: '1',
+    user: {
+        id: '1',
+        username: 'Artur',
+        avatar: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/08/how-to-become-a-programmer.jpg',
+    },
     type: [ArticleType.IT],
     blocks: [{ id: '1', code: 'code', type: ArticleBlockType.CODE }],
 };
