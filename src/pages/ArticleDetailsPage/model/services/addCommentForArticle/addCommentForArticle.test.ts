@@ -5,6 +5,9 @@ import {
     ArticleType,
 } from 'entities/Article/model/types/article';
 import { addCommentForArticle } from './addCommentForArticle';
+import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
+
+jest.mock('../fetchCommentsByArticleId/fetchCommentsByArticleId');
 
 const userData = { id: '1', username: 'asd' };
 const article: Article = {
@@ -38,9 +41,7 @@ describe('addCommentForArticle', () => {
         thunk.api.post.mockReturnValue(Promise.resolve({ data: comment }));
         const result = await thunk.callThunk('comment 1123');
 
-        // expect(thunk.dispatch).toHaveBeenCalledWith(
-        //     fetchCommentsByArticleId(article.id),
-        // );
+        expect(fetchCommentsByArticleId).toHaveBeenCalledWith(article.id);
         expect(thunk.dispatch).toHaveBeenCalledTimes(3);
         expect(thunk.api.post).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
