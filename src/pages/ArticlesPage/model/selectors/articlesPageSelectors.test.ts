@@ -7,6 +7,7 @@ import {
     getArticlesPageNum,
     getArticlesPageLimit,
     getArticlesPageHasMore,
+    getArticlesPageInited,
 } from './articlesPageSelectors';
 
 describe('articlesPageSelectors', () => {
@@ -79,5 +80,13 @@ describe('articlesPageSelectors', () => {
             },
         };
         expect(getArticlesPageHasMore(state as StateSchema)).toEqual(true);
+    });
+    test('Test should return inited', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                _inited: true,
+            },
+        };
+        expect(getArticlesPageInited(state as StateSchema)).toEqual(true);
     });
 });
