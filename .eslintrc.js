@@ -66,6 +66,7 @@ module.exports = {
         // 'no-param-reassign': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
         'no-undef': 'off',
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
@@ -77,6 +78,7 @@ module.exports = {
             files: [
                 '**/src/**/*.{test,stories}.{ts,tsx}',
                 '**/src/**/slice/*.ts',
+                '**/src/**/slices/*.ts',
             ],
             rules: {
                 'i18next/no-literal-string': 'off',
