@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -11,19 +12,30 @@ interface ArticleListProps {
     articles: Article[];
     isLoading?: boolean;
     view?: ArticleView;
+    target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ArticleView) => {
     return new Array(view === ArticleView.TILE ? 9 : 3)
         .fill(0)
         .map((item, index) => (
-            <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
+            <ArticleListItemSkeleton
+                className={cls.card}
+                key={index}
+                view={view}
+            />
         ));
 };
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const { className, articles, isLoading, view = ArticleView.TILE } = props;
-    const { t } = useTranslation();
+    const {
+        className,
+        articles,
+        isLoading,
+        target,
+        view = ArticleView.TILE,
+    } = props;
+    const { t } = useTranslation('article');
 
     const renderArticle = (article: Article) => {
         return (
@@ -32,9 +44,23 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 article={article}
                 view={view}
                 className={cls.card}
+                target={target}
             />
         );
     };
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div
+                className={classNames(cls.ArticleList, {}, [
+                    className,
+                    cls[view],
+                ])}
+            >
+                <Text size={TextSize.L} title={t('Статьи не найдены')} />
+            </div>
+        );
+    }
 
     return (
         <div

@@ -36,7 +36,9 @@ describe('addCommentForArticle', () => {
         const thunk = new TestAsyncThunk(addCommentForArticle, {
             user: { authData: userData, _inited: true },
             articleDetails: { data: article, isLoading: false },
-            articleDetailsComments: {},
+            articleDetailsPage: {
+                comments: {},
+            },
         });
         thunk.api.post.mockReturnValue(Promise.resolve({ data: comment }));
         const result = await thunk.callThunk('comment 1123');
@@ -51,7 +53,9 @@ describe('addCommentForArticle', () => {
         const thunk = new TestAsyncThunk(addCommentForArticle, {
             user: { authData: userData, _inited: true },
             articleDetails: { data: article, isLoading: false },
-            articleDetailsComments: {},
+            articleDetailsPage: {
+                comments: {},
+            },
         });
         thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk('comment 12');
