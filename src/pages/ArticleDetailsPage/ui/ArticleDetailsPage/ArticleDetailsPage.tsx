@@ -14,9 +14,10 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Page } from 'widgets/Page/Page';
-import { fetchArticlesRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import {
+    fetchArticlesRecommendations,
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import cls from './ArticleDetailsPage.module.scss';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
@@ -25,6 +26,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByAr
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
 import { getArticleRecommendations } from '../../model/slices/articleDetailsPageRecommendationsSlice';
 import { articleDetailsPageReducer } from '../../model/slices';
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -77,9 +79,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             <Page
                 className={classNames(cls.ArticleDetailsPage, {}, [className])}
             >
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-                    {t('Назад к списку')}
-                </Button>
+                <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
                 <Text
                     size={TextSize.L}
