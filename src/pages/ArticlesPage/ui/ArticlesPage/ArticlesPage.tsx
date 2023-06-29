@@ -13,7 +13,7 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'widgets/Page/Page';
-import { ArticlesPageFilters } from 'pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import {
     articlesPageReducer,
     getArticles,
