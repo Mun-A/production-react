@@ -36,16 +36,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         navigate(RoutePath.articles);
     }, [navigate]);
 
-    if (!id) {
-        return (
-            <div
-                className={classNames(cls.ArticleDetailsPage, {}, [className])}
-            >
-                {t('Статья не найдена')}
-            </div>
-        );
-    }
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page
