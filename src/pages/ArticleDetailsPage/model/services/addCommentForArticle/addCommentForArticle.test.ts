@@ -1,9 +1,6 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { Article } from 'entities/Article';
-import {
-    ArticleBlockType,
-    ArticleType,
-} from 'entities/Article/model/types/article';
+import { ArticleBlockType, ArticleType } from 'entities/Article/model/consts/articleConsts';
 import { addCommentForArticle } from './addCommentForArticle';
 import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
 
