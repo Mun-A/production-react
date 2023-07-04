@@ -5,7 +5,7 @@ import { ArticleView } from 'entities/Article';
 import ArticleEditPage from './ArticleEditPage';
 
 export default {
-    title: 'pages/ArticleEditPage',
+    title: 'pages/ArticleEditPage/ArticleEditPage',
     component: ArticleEditPage,
     argTypes: {
         backgroundColor: { control: 'color' },
