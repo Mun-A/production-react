@@ -1,12 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleDetails } from '@/entities/Article';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
-import { CommentList } from '@/entities/Comment';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -18,6 +15,7 @@ import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetails
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { ArticleRating } from '@/features/articleRating';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -36,6 +34,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         navigate(RoutePath.articles);
     }, [navigate]);
 
+    if (!id) {
+        return null;
+    }
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page
@@ -44,6 +46,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
+                    <ArticleRating articleId={id} />
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
