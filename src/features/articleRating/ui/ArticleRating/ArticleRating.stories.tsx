@@ -47,6 +47,12 @@ Normal.args = { articleId: '1' };
 Normal.parameters = {
     mockData: [
         {
+            url: `${__API__}/article-ratings?userId=1&articleId=1`,
+            method: 'GET',
+            status: 200,
+            response: [{ rate: 0 }],
+        },
+        {
             url: `${__API__}/article-ratings`,
             method: 'POST',
             payload: {
