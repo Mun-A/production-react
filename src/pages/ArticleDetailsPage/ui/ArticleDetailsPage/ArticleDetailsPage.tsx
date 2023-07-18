@@ -3,7 +3,6 @@ import { memo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleDetails } from '@/entities/Article';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -16,6 +15,7 @@ import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleRating } from '@/features/articleRating';
+import { RoutePath } from '@/shared/const/router';
 
 interface ArticleDetailsPageProps {
     className?: string;
