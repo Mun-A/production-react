@@ -85,6 +85,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'mun-a-plugin/path-checker': ['error', { alias: '@' }],
+        'mun-a-plugin/public-api-imports-a-mun': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

@@ -1,3 +1,5 @@
+/* eslint-disable mun-a-plugin/public-api-imports-a-mun */
+// TODO
 import { StoryFn } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice';
