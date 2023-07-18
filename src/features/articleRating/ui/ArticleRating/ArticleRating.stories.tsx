@@ -7,7 +7,7 @@ import { UserRole } from '@/entities/User';
 import { Article } from '@/entities/Article';
 
 export default {
-    title: 'features/articleRating/ArticleRating',
+    title: 'features/ArticleRating',
     component: ArticleRating,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -29,18 +29,6 @@ export default {
 const Template: ComponentStory<typeof ArticleRating> = (args) => (
     <ArticleRating {...args} />
 );
-
-const article: Article = {
-    id: '1',
-    img: '',
-    createdAt: '',
-    views: 123,
-    user: { id: '1', username: '123' },
-    blocks: [],
-    type: [],
-    title: '123',
-    subtitle: 'asfsa',
-};
 
 export const Normal = Template.bind({});
 Normal.args = { articleId: '1' };
