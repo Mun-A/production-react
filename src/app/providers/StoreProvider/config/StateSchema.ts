@@ -12,9 +12,7 @@ import { UserSchema } from '@/entities/User';
 import { AddCommentFormSchema } from '@/features/AddCommentForm';
 import { LoginSchema } from '@/features/AuthByUsername';
 import {
-    ArticleDetailsCommentsSchema,
     ArticleDetailsPageSchema,
-    ArticleDetailsRecommendationsSchema,
 } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { UISchema } from '@/features/UI';
