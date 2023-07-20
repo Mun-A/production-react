@@ -24,11 +24,13 @@ module.exports = {
         'i18next',
         'react-hooks',
         'mun-a-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
             2,
             {
@@ -84,7 +86,25 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'warn',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
-        'mun-a-plugin/path-checker': 'error',
+        'mun-a-plugin/path-checker': ['error', { alias: '@' }],
+        'mun-a-plugin/public-api-imports-a-mun': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
+        'mun-a-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

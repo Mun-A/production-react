@@ -1,10 +1,8 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import withMock from 'storybook-addon-mock';
 import { NotificationList } from './NotificationList';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { UserRole } from '@/entities/User';
-import { Rated } from '@/features/articleRating/ui/ArticleRating/ArticleRating.stories';
 
 export default {
     title: 'entities/Notification/NotificationList',
