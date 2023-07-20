@@ -15,7 +15,7 @@ import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleRating } from '@/features/articleRating';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticles } from '@/shared/const/router';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -31,7 +31,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const navigate = useNavigate();
 
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     if (!id) {

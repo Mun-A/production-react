@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;
@@ -22,29 +22,26 @@ export const ArticleDetailsPageHeader = memo(
         const article = useSelector(getArticleDetailsData);
 
         const onBackToList = useCallback(() => {
-            navigate(RoutePath.articles);
+            navigate(getRouteArticles());
         }, [navigate]);
 
         const onEditArticle = useCallback(() => {
-            navigate(`${RoutePath.article_details}${article?.id}/edit`);
-        }, [article?.id, navigate]);
+            if (article) {
+                navigate(getRouteArticleEdit(article.id));
+            }
+        }, [article, navigate]);
 
         return (
             <HStack
                 max
                 justify="between"
-                className={classNames('', {}, [
-                    className,
-                ])}
+                className={classNames('', {}, [className])}
             >
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                     {t('Назад к списку')}
                 </Button>
                 {canEdit && (
-                    <Button
-                        theme={ButtonTheme.OUTLINE}
-                        onClick={onEditArticle}
-                    >
+                    <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle}>
                         {t('Редактировать')}
                     </Button>
                 )}
