@@ -5,7 +5,12 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/User';
+import {
+    getUserAuthData,
+    isUserAdmin,
+    isUserManager,
+    userActions,
+} from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
@@ -52,7 +57,9 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     onClick: onLogout,
                 },
             ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
+            trigger={
+                <Avatar fallbackInverted size={30} src={authData.avatar} />
+            }
         />
     );
 });
