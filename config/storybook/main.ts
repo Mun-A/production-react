@@ -1,3 +1,8 @@
+import path from 'path';
+import { Configuration, DefinePlugin, RuleSetRule } from 'webpack';
+import { BuildPaths } from '../build/types/config';
+import { buildCssLoader } from '../build/loaders/buildCssLoader';
+
 export default {
     stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
@@ -9,11 +14,58 @@ export default {
             },
         },
         '@storybook/addon-interactions',
-        'storybook-addon-mock/register',
+        'storybook-addon-mock',
         'storybook-addon-themes',
     ],
     framework: '@storybook/react',
     core: {
         builder: 'webpack5',
+    },
+    webpackFinal: async (config: Configuration) => {
+        const paths: BuildPaths = {
+            build: '',
+            html: '',
+            entry: '',
+            src: path.resolve(__dirname, '..', '..', 'src'),
+            locales: '',
+            buildLocales: '',
+        };
+        config!.resolve!.modules!.push(paths.src);
+        config!.resolve!.extensions!.push('.ts', '.tsx');
+        // eslint-disable-next-line no-param-reassign
+        config!.resolve!.alias = {
+            ...config!.resolve!.alias,
+            '@': path.resolve(__dirname, '..', '..', 'src'),
+        };
+
+        // svg
+        // @ts-ignore
+        // eslint-disable-next-line no-param-reassign
+        config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
+            if (/svg/.test(rule.test as string)) {
+                return { ...rule, exclude: /\.svg$/i };
+            }
+
+            return rule;
+        });
+
+        config!.module!.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        });
+
+        // Переопределяем webpack config - scss
+        config!.module!.rules.push(buildCssLoader(true));
+
+        config.plugins?.push(
+            new DefinePlugin({
+                __IS_DEV__: JSON.stringify(true),
+                __API__: JSON.stringify('https://testapi.com'),
+                __PROJECT__: JSON.stringify('storybook'),
+            }),
+        );
+
+        // Return the altered config
+        return config;
     },
 };
