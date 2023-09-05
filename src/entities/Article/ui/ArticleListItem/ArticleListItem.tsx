@@ -51,6 +51,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     className,
                     cls[view],
                 ])}
+                data-testid="ArticleListItem"
             >
                 <Card>
                     <div className={cls.header}>
@@ -99,6 +100,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 className,
                 cls[view],
             ])}
+            data-testid="ArticleListItem"
         >
             <Card>
                 <div className={cls.imageWrapper}>
