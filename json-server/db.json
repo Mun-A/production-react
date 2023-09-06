@@ -768,6 +768,13 @@
       "rate": 5,
       "feedback": "",
       "id": "HK7sUJB"
+    },
+    {
+      "userId": "4",
+      "articleId": "CgSlGGS",
+      "rate": 4,
+      "feedback": "feedback",
+      "id": "JahfhR9"
     }
   ],
   "profile-ratings": [
