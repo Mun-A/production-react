@@ -16,5 +16,9 @@ const Template: ComponentStory<typeof NotificationItem> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {
-    item: { id: '1', title: 'Notification Item 1', description: 'Description 1' },
+    item: {
+        id: '1',
+        title: 'Notification Item 1',
+        description: 'Description 1',
+    },
 };

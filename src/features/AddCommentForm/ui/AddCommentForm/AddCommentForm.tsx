@@ -63,7 +63,11 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                     onChange={onCommentTextChange}
                     data-testid="AddCommentForm.Input"
                 />
-                <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler} data-testid="AddCommentForm.Button">
+                <Button
+                    theme={ButtonTheme.OUTLINE}
+                    onClick={onSendHandler}
+                    data-testid="AddCommentForm.Button"
+                >
                     {t('Отправить')}
                 </Button>
             </HStack>

@@ -41,13 +41,15 @@ export default {
         // svg
         // @ts-ignore
         // eslint-disable-next-line no-param-reassign
-        config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
-            if (/svg/.test(rule.test as string)) {
-                return { ...rule, exclude: /\.svg$/i };
-            }
+        config!.module!.rules = config.module!.rules!.map(
+            (rule: RuleSetRule) => {
+                if (/svg/.test(rule.test as string)) {
+                    return { ...rule, exclude: /\.svg$/i };
+                }
 
-            return rule;
-        });
+                return rule;
+            },
+        );
 
         config!.module!.rules.push({
             test: /\.svg$/,

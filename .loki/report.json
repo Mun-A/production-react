@@ -1,1 +1,12 @@
-{"newItems":[],"deletedItems":[],"passedItems":[],"failedItems":["chrome_laptop_shared_Skeleton_Circle_Dark.png"],"expectedItems":["chrome_laptop_shared_Skeleton_Circle_Dark.png"],"actualItems":["chrome_laptop_shared_Skeleton_Circle_Dark.png"],"diffItems":["chrome_laptop_shared_Skeleton_Circle_Dark.png"],"actualDir":"current","expectedDir":"reference","diffDir":"difference"}
+{
+    "newItems": [],
+    "deletedItems": [],
+    "passedItems": [],
+    "failedItems": ["chrome_laptop_shared_Skeleton_Circle_Dark.png"],
+    "expectedItems": ["chrome_laptop_shared_Skeleton_Circle_Dark.png"],
+    "actualItems": ["chrome_laptop_shared_Skeleton_Circle_Dark.png"],
+    "diffItems": ["chrome_laptop_shared_Skeleton_Circle_Dark.png"],
+    "actualDir": "current",
+    "expectedDir": "reference",
+    "diffDir": "difference"
+}
