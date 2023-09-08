@@ -11,9 +11,7 @@ import { CounterSchema } from '@/entities/Counter';
 import { UserSchema } from '@/entities/User';
 import { AddCommentFormSchema } from '@/features/AddCommentForm';
 import { LoginSchema } from '@/features/AuthByUsername';
-import {
-    ArticleDetailsPageSchema,
-} from '@/pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { UISchema } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
@@ -23,7 +21,7 @@ export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     ui: UISchema;
-    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
     // Async reducers
     loginForm?: LoginSchema;

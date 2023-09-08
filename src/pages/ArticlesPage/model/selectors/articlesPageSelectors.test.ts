@@ -21,9 +21,7 @@ describe('articlesPageSelectors', () => {
     });
     test('Test should work with empty state isLoading', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getArticlesPageIsLoading(state as StateSchema)).toEqual(
-            false,
-        );
+        expect(getArticlesPageIsLoading(state as StateSchema)).toEqual(false);
     });
     test('Test should return error', () => {
         const state: DeepPartial<StateSchema> = {
