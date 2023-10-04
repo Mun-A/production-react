@@ -16,6 +16,8 @@ import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleRating } from '@/features/articleRating';
 import { getRouteArticles } from '@/shared/const/router';
+import { Counter } from '@/entities/Counter';
+import { getFeatureFlag } from '@/shared/lib/features';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -29,6 +31,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article');
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
+    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
+    const isCounterEnabled = getFeatureFlag('isCounterEnabled');
 
     const onBackToList = useCallback(() => {
         navigate(getRouteArticles());
@@ -46,7 +50,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ArticleRating articleId={id} />
+                    {isCounterEnabled && <Counter />}
+                    {isArticleRatingEnabled && <ArticleRating articleId={id} />}
                     <ArticleRecommendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
