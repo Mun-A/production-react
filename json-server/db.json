@@ -575,7 +575,7 @@
             "id": "bAs7YBE"
         },
         {
-            "articleId": "2",
+            "artic leId": "2",
             "userId": "1",
             "text": "python!!!",
             "id": "p5rMadd"
@@ -596,6 +596,11 @@
             "features": {
                 "isArticleRatingEnabled": true,
                 "isCounterEnabled": true
+            },
+            "jsonSettings": {
+                "theme": "app_dark_theme",
+                "isFirstVisit": true,
+                "settingsPageHasBeenOpen": false
             },
             "avatar": "https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/08/how-to-become-a-programmer.jpg"
         },
