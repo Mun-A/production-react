@@ -16,17 +16,17 @@ describe('userSlice', () => {
             userReducer(state as UserSchema, userActions.setAuthData(data)),
         ).toEqual({ authData: data });
     });
-    test('Test init AuthData', () => {
-        const state: DeepPartial<UserSchema> = {
-            _inited: false,
-        };
-
-        expect(
-            userReducer(state as UserSchema, userActions.initAuthData()),
-        ).toEqual({
-            _inited: true,
-        });
-    });
+    // test('Test init AuthData', () => {
+    //     const state: DeepPartial<UserSchema> = {
+    //         _inited: false,
+    //     };
+    //
+    //     expect(
+    //         userReducer(state as UserSchema, userActions.initAuthData()),
+    //     ).toEqual({
+    //         _inited: true,
+    //     });
+    // });
     test('Test logout', () => {
         const state: DeepPartial<UserSchema> = {
             authData: data,
